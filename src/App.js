@@ -12,7 +12,9 @@ function App() {
       setCoins(res.data);
     })
     .catch((error) => console.log(error))
-  })
+  }, [])
+
+
   return (
     <div>
       <div className="header">
@@ -21,6 +23,7 @@ function App() {
           <input className="inputField" type="text" placeholder="Search a Coin" onChange="" />
         </form>
       </div>
+      <Coin />
     </div>
   )
 }
